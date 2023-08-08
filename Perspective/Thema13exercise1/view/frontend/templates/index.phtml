@@ -1,0 +1,37 @@
+<?php
+/** @var \Perspective\Thema13exercise1\Block\Template $block */
+
+/* ------------- Ex.1  -------------*/
+
+/* if ($viewModel->isEnabled())
+{
+    if ($viewModel->isEnabledUAH())
+    {
+        echo "<h4>Цена в гривнах:</h4>";
+        echo $currentProduct->getFinalPrice()*$viewModel->getUAH()." грн.";
+        echo "<br>";
+    }
+    if ($viewModel->isEnabledUSD())
+    {
+        echo "<h4>Цена в долларах:</h4>";
+        echo $currentProduct->getFinalPrice()*$viewModel->getUSD()." $";
+        echo "<br>";
+    }
+    if ($viewModel->isEnabledEURO())
+    {
+        echo "<h4>Цена в евро:</h4>";
+        echo $currentProduct->getFinalPrice()*$viewModel->getEURO()." €";
+    }
+} */
+
+/* ------------- Ex.1 additonal -------------*/
+$viewModel = $block->getViewModel();
+$currentProduct = $viewModel->getCurrentProduct();
+$courseUAH = $viewModel->convertPrice($currentProduct->getFinalPrice(),'USD','UAH');
+$courseUSD = $viewModel->convertPrice($currentProduct->getFinalPrice(),'USD','USD');
+$courseEURO = $viewModel->convertPrice($currentProduct->getFinalPrice(),'USD','EUR');
+echo "<h4>Цена в гривнах:</h4>".$courseUAH." грн.";
+echo "<h4>Цена в долларах:</h4>".$courseUSD." $";
+echo "<h4>Цена в евро:</h4>".round($courseEURO,2)." €";
+?>
+

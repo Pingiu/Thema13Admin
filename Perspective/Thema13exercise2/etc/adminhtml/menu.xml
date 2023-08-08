@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Perspective_Thema13exercise2::perspective" title="Thema13exercise2" module="Perspective_Thema13exercise2" sortOrder="51" resource="Perspective_Thema13exercise2::perspective"/>
+        <add id="Perspective_Thema13exercise2::perspective_configuration" title="Configuration" module="Perspective_Thema13exercise2" sortOrder="99" parent="Perspective_Thema13exercise2::perspective" action="adminhtml/system_config/edit/section/perspective" resource="Perspective_Thema13exercise2::perspective"/>
+    </menu>
+</config>

@@ -1,0 +1,16 @@
+<?php
+/** @var \Perspective\Thema13exercise2\Block\Template $block */
+$viewModel = $block->getViewModel();
+$currentProduct = $viewModel->getCurrentProduct();
+$id = $currentProduct->getId();
+$currentProduct = $viewModel->getStockItem($id);
+
+if ($viewModel->isEnabled()){
+    if ($currentProduct->getQty()<$viewModel->getParameterX())
+    {
+        echo "<h2 style='color:red'>Заканчивается</h2>";
+        echo "<h3>Осталось ".$currentProduct->getQty()." единиц</h3>";
+    }
+}
+?>
+

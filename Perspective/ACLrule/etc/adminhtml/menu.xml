@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Perspective_ACLrule::aclrule" title="Hello World" module="Perspective_ACLrule" sortOrder="51" resource="Perspective_ACLrule::aclrule"/>
+        <add id="Perspective_ACLrule::post" title="Manage Posts" module="Perspective_ACLrule" sortOrder="10" action="perspective_aclrule/post" resource="Perspective_ACLrule::post" parent="Perspective_ACLrule::aclrule"/>
+        <add id="Perspective_ACLrule::aclrule_configuration" title="Configuration" module="Perspective_ACLrule" sortOrder="99" parent="Perspective_ACLrule::aclrule" action="adminhtml/system_config/edit/section/aclrule" resource="Perspective_ACLrule::aclrule_configuration"/>
+    </menu>
+</config>

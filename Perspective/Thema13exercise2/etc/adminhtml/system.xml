@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="thema13exercise2" translate="label" sortOrder="1000">
+            <label>Thema13exercise2</label>
+        </tab>
+        <section id="thema13exercise2" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+
+            <label>Thema13exercise2</label>
+            <tab>thema13exercise2</tab>
+            <resource>Perspective_Thema13exercise2::perspective</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General</label>
+                <field id="enabled" type="select" translate="label,comment,tooltip" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <config_path>perspective/general/enabled</config_path>
+                    <comment>Helpful message about using this field</comment>
+                    <tooltip>Longer helpful message about using this field</tooltip>
+                </field>
+                                
+                <field id="Parameter_X" type="text" translate="label" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Parameter_X</label>
+                    <validate>required-entry alphanumeric</validate>
+                    <config_path>perspective/general/Parameter_X</config_path>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                </field>
+                
+                
+            </group>
+        </section>
+    </system>
+</config>
